@@ -1,0 +1,17 @@
+[17-Dec-2016 05:25:44 UTC] PHP Warning:  array_unshift() expects parameter 1 to be array, null given in /home/azmachin/public_html/wp-includes/class-wp-xmlrpc-server.php on line 596
+[18-Jan-2017 16:46:04 UTC] PHP Warning:  Unknown: write failed: Disk quota exceeded (122) in Unknown on line 0
+[18-Jan-2017 16:46:04 UTC] PHP Warning:  Unknown: Failed to write session data (files). Please verify that the current setting of session.save_path is correct (/tmp) in Unknown on line 0
+[18-Jan-2017 16:50:26 UTC] PHP Warning:  Unknown: write failed: Disk quota exceeded (122) in Unknown on line 0
+[18-Jan-2017 16:50:26 UTC] PHP Warning:  Unknown: Failed to write session data (files). Please verify that the current setting of session.save_path is correct (/tmp) in Unknown on line 0
+[18-Jan-2017 16:50:27 UTC] PHP Warning:  Unknown: write failed: Disk quota exceeded (122) in Unknown on line 0
+[18-Jan-2017 16:50:27 UTC] PHP Warning:  Unknown: Failed to write session data (files). Please verify that the current setting of session.save_path is correct (/tmp) in Unknown on line 0
+[18-Jan-2017 16:50:28 UTC] PHP Warning:  Unknown: write failed: Disk quota exceeded (122) in Unknown on line 0
+[18-Jan-2017 16:50:28 UTC] PHP Warning:  Unknown: Failed to write session data (files). Please verify that the current setting of session.save_path is correct (/tmp) in Unknown on line 0
+[19-Feb-2017 11:53:10 UTC] PHP Fatal error:  Out of memory (allocated 23330816) (tried to allocate 83 bytes) in /home/azmachin/public_html/wp-includes/wp-db.php on line 1775
+[19-Feb-2017 15:53:09 UTC] PHP Warning:  Unknown: write failed: Disk quota exceeded (122) in Unknown on line 0
+[19-Feb-2017 15:53:09 UTC] PHP Warning:  Unknown: Failed to write session data (files). Please verify that the current setting of session.save_path is correct (/tmp) in Unknown on line 0
+[19-Feb-2017 15:55:07 UTC] PHP Warning:  Unknown: write failed: Disk quota exceeded (122) in Unknown on line 0
+[19-Feb-2017 15:55:07 UTC] PHP Warning:  Unknown: Failed to write session data (files). Please verify that the current setting of session.save_path is correct (/tmp) in Unknown on line 0
+[22-Feb-2017 22:05:58 UTC] PHP Warning:  Unknown: write failed: Disk quota exceeded (122) in Unknown on line 0
+[22-Feb-2017 22:05:58 UTC] PHP Warning:  Unknown: Failed to write session data (files). Please verify that the current setting of session.save_path is correct (/tmp) in Unknown on line 0
+[11-Mar-2017 02:06:23 UTC] PHP Warning:  array_unshift() expects parameter 1 to be array, null given in /home/azmachin/public_html/wp-includes/class-wp-xmlrpc-server.php on line 596

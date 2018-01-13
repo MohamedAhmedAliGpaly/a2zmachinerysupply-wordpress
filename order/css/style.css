@@ -1,0 +1,185 @@
+@import url(https://fonts.googleapis.com/css?family=Ubuntu+Condensed|Ubuntu:400,500,700);
+
+body, html {
+    font-family: "Ubuntu", sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #FFFFFF;
+    background-color: #272b30;
+}
+
+caption{
+    text-transform: capitalize;
+    text-align: left;
+    color: #c8c8c8;
+    /*font-weight: bold;*/
+}
+
+legend{
+    text-transform: capitalize;
+    text-align: left;
+    color: #c8c8c8;
+    /*font-weight: bold;*/
+}
+
+.pagination{
+    margin: 8px 0;
+}
+
+.page-wrapper {
+    border: 1px solid #dddddd;
+    box-shadow: 1px 1px 20px #8b8b8b;
+    border-radius: 5px;
+    margin: 25px auto;
+    width: 1190px;
+    padding-bottom: 15px;
+}
+
+.logo-wrapper{
+    text-align: center;
+    padding: 25px 0;
+}
+
+.logo-wrapper img{
+    width: 388px;
+}
+
+.navbar{
+    text-transform: capitalize;
+    font-weight: 400;
+}
+
+.sidebar-wrapper{
+    /*margin-bottom: 450px;*/
+    text-transform: capitalize;
+}
+
+label{
+    text-transform: capitalize;
+    color: #5bc0de;
+    font-size: 0.9em;
+    font-weight: 400;
+}
+
+.table th{
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    color: #5bc0de;
+    letter-spacing: 0.03em;
+}
+
+.top-menu{
+    /*padding-bottom: 10px;*/
+    border: 1px solid #3e3e3e;
+    margin-top: 15px;
+    border-bottom: 2px solid #505050;
+
+}
+
+.top-menu ul{
+    margin: 0px;
+    padding: 10px 2px;
+
+}
+
+.top-menu li{
+    display: inline-block;
+    list-style: none;
+}
+
+.top-menu a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #ff9800;
+    font-size: 14px;
+    letter-spacing: 0.06em;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    padding: 0px 12px;
+}
+
+.top-menu a:hover{
+    color: #ffffff;
+}
+
+.top-menu li:first-child a{
+    /*color: #ffffff;*/
+}
+
+.top-menu .pull-right li a{
+    text-transform: capitalize;
+    color: white;
+}
+
+
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+    border-top: none;
+}
+
+.table > caption + thead > tr:first-child > td, .table > caption + thead > tr:first-child > th, .table > colgroup + thead > tr:first-child > td, .table > colgroup + thead > tr:first-child > th, .table > thead:first-child > tr:first-child > td, .table > thead:first-child > tr:first-child > th {
+    text-align: center;
+    vertical-align: middle;
+}
+
+
+.copyright-wrapper{
+    /*background-color: #262626;*/
+    padding: 50px 0 65px 0;
+}
+
+.dropdown-menu>li>a {
+    padding: 1px 20px;
+}
+
+.copyright-wrapper p a{
+    text-transform: none;
+    font-size: 14px;
+    color: #888888;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.copyright-wrapper p a:hover{
+    color: #FFFFFF;
+}
+
+.copyright-wrapper ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: right;
+}
+
+.copyright-wrapper ul li{
+    display: inline-block;
+    margin-right: 18px;
+}
+
+.copyright-wrapper ul li:last-child{
+    margin-right: 0px;
+}
+
+.copyright-wrapper ul li a{
+    text-transform: none;
+    font-size: 18px;
+    color: #FFFFFF;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.copyright-wrapper ul li a:hover{
+    color: #ff9800;
+}
+
+.copyright-wrapper .container{
+    border-top: 1px solid #3c3c3c;
+    padding-bottom: 0;
+    padding-top: 30px;
+}

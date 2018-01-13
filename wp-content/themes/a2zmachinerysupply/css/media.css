@@ -1,0 +1,246 @@
+/* Large desktops and laptops */
+@media (min-width: 1200px) {
+
+}
+
+/* Landscape tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+
+}
+
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+
+    .top-navigation-wrapper{
+        text-align: center;
+        padding-bottom: 10px;
+    }
+
+    .logo-wrapper img{
+        width: 70%;
+    }
+
+    .logo-wrapper .online-quotation{
+        display: none;
+    }
+
+    .menu-wrapper{
+        display: none;
+    }
+
+    .left-sidebar .widget_calendar{
+        display: none;
+    }
+
+    .left-sidebar .widget_newsletterwidget{
+        display: none;
+    }
+
+    .left-sidebar h2 {
+        font-size: 20px;
+    }
+
+    .product-block{
+        padding-bottom: 8px;
+    }
+
+    .product-block h2 {
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 1.3em;
+        margin-top: 13px;
+        height: 35px;
+        overflow: hidden;
+    }
+
+    .footer-wrapper ul{
+        margin-bottom: 25px;
+    }
+
+    .footer-wrapper ul.address li{
+        padding-top: 10px;
+        margin-top: 10px;
+    }
+
+    .copyright-wrapper{
+        text-align: center;
+    }
+
+
+    .copyright-wrapper ul{
+        text-align: center;
+        margin-top: 15px;
+    }
+
+    .copyright-wrapper{
+        padding-top: 20px;
+        padding-bottom: 40px;
+    }
+
+    .newsletter-wrapper {
+        background-color: #ff9800;
+        padding: 25px 0 30px 0;
+    }
+
+    .left-menu{
+        /*display: none;*/
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+
+    .left-menu ul ul{
+        left: 10%;
+        top: 48px;
+        width: 60%;
+        border: 5px solid red;
+        border-right: 5px;
+    }
+
+    .left-menu ul ul li{
+        /*background-color: #ff8800;*/
+    }
+
+    .left-menu ul ul li a{
+        color: #FFFFFF;
+    }
+
+    .hot-product-wrapper{
+        margin-bottom: 0;
+    }
+
+    .left-sidebar ul li{
+        margin-bottom: 15px;
+    }
+
+    .online-quotation-right{
+        display: none;
+    }
+
+    .online-quotation-left{
+        display: none;
+    }
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+    .top-navigation-wrapper{
+        text-align: center;
+        padding-bottom: 10px;
+    }
+
+    .logo-wrapper img{
+        width: 75%;
+    }
+
+    .logo-wrapper .online-quotation{
+        display: none;
+    }
+
+    .menu-wrapper{
+        display: none;
+    }
+
+    .left-sidebar .widget_calendar{
+        display: none;
+    }
+
+    .left-sidebar .widget_newsletterwidget{
+        display: none;
+    }
+
+    .left-sidebar h2 {
+        font-size: 20px;
+    }
+
+    .product-block{
+        padding-bottom: 8px;
+    }
+
+    .product-block h2 {
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 1.3em;
+        margin-top: 13px;
+        height: 35px;
+        overflow: hidden;
+    }
+
+    .footer-wrapper ul{
+        margin-bottom: 25px;
+    }
+
+    .footer-wrapper ul.address li{
+        padding-top: 10px;
+        margin-top: 10px;
+    }
+
+    .copyright-wrapper{
+        text-align: center;
+    }
+
+
+
+    .copyright-wrapper ul{
+        text-align: center;
+        margin-top: 15px;
+    }
+
+    .copyright-wrapper{
+        padding-top: 20px;
+        padding-bottom: 40px;
+    }
+
+    .newsletter-wrapper {
+        background-color: #ff9800;
+        padding: 25px 0 30px 0;
+    }
+
+     .left-menu{
+         display: none;
+     }
+
+     .hot-product-wrapper{
+         margin-bottom: 0;
+     }
+
+    .left-sidebar ul li{
+        margin-bottom: 15px;
+    }
+
+    .newsletter-wrapper input[type="email"]{
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    .newsletter-wrapper .newsletter-submit{
+        width: 100%;
+    }
+
+    .single-product .product-info h2{
+        margin-top: 8px;
+    }
+
+    .single-product .product-info p{
+        margin-top: 15px;
+    }
+
+    .carousel-indicators{
+        display: none;
+    }
+
+    .online-quotation-right{
+        display: none;
+    }
+
+    .online-quotation-left{
+        display: none;
+    }
+
+}
+
+/* Portrait phones and smaller */
+@media (max-width: 480px) {
+
+
+
+}
