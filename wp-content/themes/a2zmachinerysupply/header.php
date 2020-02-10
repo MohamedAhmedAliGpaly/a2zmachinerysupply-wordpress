@@ -127,18 +127,18 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12">
-                <a class="online-quotation-left" target="_blank" href="http://www.a2zmachinerysupply.com/order/">
+                <a class="online-quotation-left" target="_blank" href="<?php echo site_url('/order/') ?>">
                     <img src="<?php echo get_template_directory_uri().'/img/create-online-quotation-left.png'; ?>" alt="Make a Quotation - A2z Machinery Supply">
                 </a>
                 <a href="<?php echo home_url(); ?>">
                     <img src="<?php echo get_template_directory_uri().'/img/logo.png'; ?>" alt="Logo A2z Machinery Supply">
                 </a>
-                <a class="online-quotation-right" target="_blank" href="http://www.a2zmachinerysupply.com/order/">
+                <a class="online-quotation-right" target="_blank" href="<?php echo site_url('/order/') ?>">
                     <img src="<?php echo get_template_directory_uri().'/img/create-online-quotation-right.png'; ?>" alt="Make a Quotation - A2z Machinery Supply">
                 </a>
             </div>
             <div class="col-md-12 text-center visible-xs visible-sm responsive-create-online-quotation">
-                <a class="" target="_blank" href="http://www.a2zmachinerysupply.com/order/">
+                <a class="" target="_blank" href="<?php echo site_url('/order/') ?>">
                     <img src="<?php echo get_template_directory_uri().'/img/create-online-quotation-right.png'; ?>" alt="Make a Quotation - A2z Machinery Supply">
                 </a>
             </div>

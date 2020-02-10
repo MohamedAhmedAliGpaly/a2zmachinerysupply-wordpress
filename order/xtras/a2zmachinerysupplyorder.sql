@@ -1,23 +1,25 @@
 -- phpMyAdmin SQL Dump
--- version 4.1.14
--- http://www.phpmyadmin.net
+-- version 4.8.4
+-- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Jun 27, 2016 at 07:42 PM
--- Server version: 5.6.17
--- PHP Version: 5.5.12
+-- Host: 127.0.0.1:3306
+-- Generation Time: Feb 10, 2020 at 01:53 PM
+-- Server version: 5.7.24
+-- PHP Version: 5.6.40
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+/*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `a2zmachinerysupply`
+-- Database: `a2zmachinerysupplyorder`
 --
 
 -- --------------------------------------------------------
@@ -26,12 +28,13 @@ SET time_zone = "+00:00";
 -- Table structure for table `carts`
 --
 
+DROP TABLE IF EXISTS `carts`;
 CREATE TABLE IF NOT EXISTS `carts` (
   `cart_id` int(11) NOT NULL AUTO_INCREMENT,
   `ip_address` varchar(45) DEFAULT NULL,
   `product_id` int(11) DEFAULT NULL,
   PRIMARY KEY (`cart_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8 ;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `carts`
@@ -47,12 +50,13 @@ INSERT INTO `carts` (`cart_id`, `ip_address`, `product_id`) VALUES
 -- Table structure for table `categories`
 --
 
+DROP TABLE IF EXISTS `categories`;
 CREATE TABLE IF NOT EXISTS `categories` (
   `category_id` int(11) NOT NULL AUTO_INCREMENT,
   `category_name` varchar(45) DEFAULT NULL,
   `category_slug` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`category_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=19 ;
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `categories`
@@ -71,22 +75,10 @@ INSERT INTO `categories` (`category_id`, `category_name`, `category_slug`) VALUE
 -- --------------------------------------------------------
 
 --
--- Table structure for table `order_details`
---
-
-CREATE TABLE IF NOT EXISTS `order_details` (
-  `oder_detail_id` int(11) NOT NULL AUTO_INCREMENT,
-  `order_quantity` varchar(45) DEFAULT NULL,
-  `product_id` int(11) DEFAULT NULL,
-  PRIMARY KEY (`oder_detail_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `orders`
 --
 
+DROP TABLE IF EXISTS `orders`;
 CREATE TABLE IF NOT EXISTS `orders` (
   `order_id` int(11) NOT NULL AUTO_INCREMENT,
   `created_at` varchar(45) DEFAULT NULL,
@@ -94,7 +86,21 @@ CREATE TABLE IF NOT EXISTS `orders` (
   `status` varchar(45) DEFAULT NULL,
   `user_id` int(11) DEFAULT NULL,
   PRIMARY KEY (`order_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `order_details`
+--
+
+DROP TABLE IF EXISTS `order_details`;
+CREATE TABLE IF NOT EXISTS `order_details` (
+  `oder_detail_id` int(11) NOT NULL AUTO_INCREMENT,
+  `order_quantity` varchar(45) DEFAULT NULL,
+  `product_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`oder_detail_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -102,6 +108,7 @@ CREATE TABLE IF NOT EXISTS `orders` (
 -- Table structure for table `products`
 --
 
+DROP TABLE IF EXISTS `products`;
 CREATE TABLE IF NOT EXISTS `products` (
   `product_id` int(11) NOT NULL AUTO_INCREMENT,
   `category_id` int(11) DEFAULT NULL,
@@ -121,7 +128,7 @@ CREATE TABLE IF NOT EXISTS `products` (
   `created_at` varchar(20) DEFAULT NULL,
   `updated_at` varchar(20) DEFAULT NULL,
   PRIMARY KEY (`product_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=19 ;
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `products`
@@ -134,46 +141,10 @@ INSERT INTO `products` (`product_id`, `category_id`, `sub_category_id`, `item_na
 -- --------------------------------------------------------
 
 --
--- Table structure for table `quotation_details`
---
-
-CREATE TABLE IF NOT EXISTS `quotation_details` (
-  `quotation_detail_id` int(11) NOT NULL AUTO_INCREMENT,
-  `quotation_id` int(11) DEFAULT NULL,
-  `product_description` varchar(45) DEFAULT NULL,
-  `quantity_unit` varchar(45) DEFAULT NULL,
-  `expected_price` varchar(10) DEFAULT NULL,
-  `quoted_price` varchar(10) DEFAULT NULL,
-  PRIMARY KEY (`quotation_detail_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=59 ;
-
---
--- Dumping data for table `quotation_details`
---
-
-INSERT INTO `quotation_details` (`quotation_detail_id`, `quotation_id`, `product_description`, `quantity_unit`, `expected_price`, `quoted_price`) VALUES
-(23, 1, 'BALL BEARING 6205 ZZ NTN JAPAN', '5', '', NULL),
-(24, 1, 'ROLLER BEARING 30307 SKF FRANCH', '2', '650', NULL),
-(25, 2, 'DEEP GROOVE BALL BEARING 6005 2RS SKF', '5', '340', NULL),
-(27, 3, 'PRESSURE SWITCH 4'' WATER FLOW', '3', '600', '750'),
-(28, 4, 'RANCH SHELAI 1/2''', '5', '400', '670'),
-(29, 5, '1', '1', '', NULL),
-(30, 6, '25', '25', '110', '120'),
-(31, 7, '6205 ZZ BALL BEARING', '2', '105', '150'),
-(32, 8, '1', '1', '1', NULL),
-(46, 2, '2', '2', '2', NULL),
-(47, 2, '3', '3', '3', NULL),
-(48, 8, '520', '3', '', NULL),
-(50, 10, '66', '6', '6', NULL),
-(55, 12, '1', '1', '1', '55'),
-(58, 12, '4', '4', '4', '55');
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `quotations`
 --
 
+DROP TABLE IF EXISTS `quotations`;
 CREATE TABLE IF NOT EXISTS `quotations` (
   `quotation_id` int(11) NOT NULL AUTO_INCREMENT,
   `created_at` varchar(45) DEFAULT NULL,
@@ -181,7 +152,7 @@ CREATE TABLE IF NOT EXISTS `quotations` (
   `status` varchar(45) DEFAULT NULL,
   `user_id` int(11) DEFAULT NULL,
   PRIMARY KEY (`quotation_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=13 ;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `quotations`
@@ -204,9 +175,48 @@ INSERT INTO `quotations` (`quotation_id`, `created_at`, `updated_at`, `status`, 
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `quotation_details`
+--
+
+DROP TABLE IF EXISTS `quotation_details`;
+CREATE TABLE IF NOT EXISTS `quotation_details` (
+  `quotation_detail_id` int(11) NOT NULL AUTO_INCREMENT,
+  `quotation_id` int(11) DEFAULT NULL,
+  `product_description` varchar(45) DEFAULT NULL,
+  `quantity_unit` varchar(45) DEFAULT NULL,
+  `expected_price` varchar(10) DEFAULT NULL,
+  `quoted_price` varchar(10) DEFAULT NULL,
+  PRIMARY KEY (`quotation_detail_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=59 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `quotation_details`
+--
+
+INSERT INTO `quotation_details` (`quotation_detail_id`, `quotation_id`, `product_description`, `quantity_unit`, `expected_price`, `quoted_price`) VALUES
+(23, 1, 'BALL BEARING 6205 ZZ NTN JAPAN', '5', '', NULL),
+(24, 1, 'ROLLER BEARING 30307 SKF FRANCH', '2', '650', NULL),
+(25, 2, 'DEEP GROOVE BALL BEARING 6005 2RS SKF', '5', '340', NULL),
+(27, 3, 'PRESSURE SWITCH 4\' WATER FLOW', '3', '600', '750'),
+(28, 4, 'RANCH SHELAI 1/2\'', '5', '400', '670'),
+(29, 5, '1', '1', '', NULL),
+(30, 6, '25', '25', '110', '120'),
+(31, 7, '6205 ZZ BALL BEARING', '2', '105', '150'),
+(32, 8, '1', '1', '1', NULL),
+(46, 2, '2', '2', '2', NULL),
+(47, 2, '3', '3', '3', NULL),
+(48, 8, '520', '3', '', NULL),
+(50, 10, '66', '6', '6', NULL),
+(55, 12, '1', '1', '1', '55'),
+(58, 12, '4', '4', '4', '55');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `sub_categories`
 --
 
+DROP TABLE IF EXISTS `sub_categories`;
 CREATE TABLE IF NOT EXISTS `sub_categories` (
   `sub_category_id` int(11) NOT NULL AUTO_INCREMENT,
   `category_id` int(11) DEFAULT NULL,
@@ -214,7 +224,7 @@ CREATE TABLE IF NOT EXISTS `sub_categories` (
   `sub_category_slug` varchar(45) DEFAULT NULL,
   `rank` int(11) DEFAULT NULL,
   PRIMARY KEY (`sub_category_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=41 ;
+) ENGINE=InnoDB AUTO_INCREMENT=41 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `sub_categories`
@@ -240,6 +250,7 @@ INSERT INTO `sub_categories` (`sub_category_id`, `category_id`, `sub_category_na
 -- Table structure for table `users`
 --
 
+DROP TABLE IF EXISTS `users`;
 CREATE TABLE IF NOT EXISTS `users` (
   `user_id` int(11) NOT NULL AUTO_INCREMENT,
   `company_name` varchar(45) DEFAULT NULL,
@@ -255,7 +266,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `created_at` varchar(25) NOT NULL,
   `updated_at` varchar(25) NOT NULL,
   PRIMARY KEY (`user_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=10 ;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `users`
@@ -264,6 +275,7 @@ CREATE TABLE IF NOT EXISTS `users` (
 INSERT INTO `users` (`user_id`, `company_name`, `company_address`, `web_url`, `name`, `email`, `password`, `phone`, `mobile`, `ip_address`, `user_agent`, `created_at`, `updated_at`) VALUES
 (8, 'Efty International', 'Bangladesh', '123@inter.com', 'Efty', 'masudrk2015@gmail.com', 'c4ca4238a0b923820dcc509a6f75849b', '123456789', '01676717945', '::1', 'Mozilla/5.0 (Windows NT 10.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36', '2016-06-12 03:40 PM', '2016-06-12 03:42 PM'),
 (9, 'Masud International', 'Dhaka', 'masud.com', 'Masud', 'masud@sbh.com', 'c4ca4238a0b923820dcc509a6f75849b', '7164956', '01770520203', '::1', 'Mozilla/5.0 (Windows NT 10.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36', '2016-06-12 03:40 PM', '2016-06-12 03:41 PM');
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
